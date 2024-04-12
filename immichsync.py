@@ -221,7 +221,7 @@ def update_album() -> None:
             print(f'Album "{album_name}" is already up to date.')
         else:
             print(
-                f'Added {count} asset{"s" if len(str(count)) > 1 else ""} to the album "{album_name}"'
+                f'Added {count} asset{"s" if count > 1 else ""} to the album "{album_name}"'
             )
     else:
         print(
@@ -256,7 +256,7 @@ def clean_album() -> None:
             if a["success"]:
                 count += 1
         if count != 0:
-            print(f'Cleared {count} assets from "{album_name}"')
+            print(f'Cleared {count} asset{"s" if count > 1 else ""} from "{album_name}"')
 
 
 json_output = {}
